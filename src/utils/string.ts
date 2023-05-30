@@ -1,0 +1,1 @@
+export const toShortAddr = (str: string) => str.replace(/(\w{5})(\w)+(\w{4})/, '$1...$3')

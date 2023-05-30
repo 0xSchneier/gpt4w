@@ -1,0 +1,52 @@
+// manrope3 font
+@font-face {
+  font-family: 'manrope3-regular';
+  src: url('/assets/fonts/manrope3/regular.woff2');
+}
+
+@font-face {
+  font-family: 'manrope3-medium';
+  src: url('/assets/fonts/manrope3/medium.woff2');
+}
+
+@font-face {
+  font-family: 'manrope3-bold';
+  src: url('/assets/fonts/manrope3/bold.woff2');
+}
+
+@font-face {
+  font-family: 'manrope3-semibold';
+  src: url('/assets/fonts/manrope3/semibold.woff2');
+}
+
+@font-face {
+  font-family: 'manrope3-extrabold';
+  src: url('/assets/fonts/manrope3/extrabold.woff2');
+}
+
+// ====== sourcehansanscn end ========
+
+$fontfallback: system-ui, -apple-system, BlinkMacSystemFont, Helvetica,
+  'PingFang SC', SCHeiti, 'Microsoft YaHei', sans-serif, 'Apple Color Emoji',
+  'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+
+// ======= menlon font class ========
+.font-regular {
+  font-family: manrope3-regular, $fontfallback;
+}
+
+.font-bold {
+  font-family: manrope3-bold, $fontfallback;
+}
+
+.font-semibold {
+  font-family: manrope3-semibold, $fontfallback;
+}
+
+.font-medium {
+  font-family: manrope3-medium, $fontfallback;
+}
+
+.font-extrabold {
+  font-family: manrope3-extrabold, $fontfallback;
+}

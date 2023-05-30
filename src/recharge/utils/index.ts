@@ -1,0 +1,1 @@
+export const toHex = (str: string) => '0x' + str

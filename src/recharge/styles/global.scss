@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+$fontfallback: system-ui, -apple-system, BlinkMacSystemFont, Helvetica,
+  'PingFang SC', SCHeiti, 'Microsoft YaHei', sans-serif, 'Apple Color Emoji',
+  'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+@font-face {
+  font-family: 'manrope3-regular';
+  src: url('/assets/fonts/manrope3/regular.woff2');
+}
+.font-regular {
+  font-family: 'manrope3-regular', $fontfallback;
+}
+
+body {
+  font-family: 'manrope3-regular', $fontfallback;
+  color: var(--color-txt);
+}
+
+div,
+span,
+li,
+ul,
+section,
+input {
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 32px;
+}
+
+.recharge-box {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  row-gap: 60px;
+  font-size: 18px;
+  .key {
+    padding-left: 40px;
+    color: #a2a2a2;
+    font-weight: 500;
+  }
+  .value {
+    display: flex;
+    align-items: center;
+  }
+  .radio {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    border: 2px solid #75A7F9;
+    &.active {
+      &::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 12px;
+        height: 12px;
+        border-radius: 100%;
+        background: #75A7F9;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+  .select-icon {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    right: 16px;
+    &::before {
+      content: '';
+      width: 10px;
+      height: 1px;
+      position: absolute;
+      background: #a2a2a2;
+      left: 0;
+      top: 7px;
+      transform: rotate(45deg);
+    }
+    &::after {
+      content: '';
+      width: 10px;
+      height: 1px;
+      position: absolute;
+      background: #a2a2a2;
+      right: 0;
+      top: 7px;
+      transform: rotate(-45deg);
+    }
+  }
+}

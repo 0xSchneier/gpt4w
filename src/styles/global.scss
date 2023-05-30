@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-txt: #4b4b4b;
+  --color-txt-placeholder: #aaa;
+  --color-txt-primary: #0A84FF;
+  --color-txt-secondary: #808083;
+  --color-txt-green: #51c671;
+  --color-txt-blue: #0A84FF;
+  --color-txt-red: #cd2c49;
+
+  // bg
+  --color-bg: #1c122c;
+  --color-bg-box: #f5f5f5;
+  --color-bg-line: #d5d5d5;
+  --color-bg-green: rgba(16, 208, 35, 0.2);
+  --color-bg-blue: #cfe3f6;
+  --color-bg-red: rgba(208, 16, 16, 0.2);
+
+  --color-link: #0A84FF;
+
+  // border
+  --color-border: #e0e3ea;
+  --color-border-green: #a9eabb;
+  --color-border-blue: #acccfc;
+  --color-border-red: #eaa9a9;
+}
+
+body {
+  font-family: manrope3-regular, $fontfallback;
+  color: var(--color-txt);
+}
+
+div,
+span,
+li,
+ul,
+section,
+input {
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 32px;
+}
+
+.setting-tooltip {
+  .ex-tooltip-inner {
+    padding: 0;
+  }
+}
+.setting-group {
+  width: 200px;
+  .setting-item {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    padding: 10px;
+    cursor: pointer;
+    &:hover {
+      background: rgba(245, 245, 245, 0.8);
+    }
+    img {
+      width: 24px;
+      height: 24px;
+      margin-right: 12px;
+    }
+  }
+}
+
+.btn {
+  @apply block mx-auto w-[300px] bg-[#5391F7] rounded-md text-[#ffffff] p-[12px] disabled:bg-opacity-80 cursor-pointer;
+  
+  &:not(:disabled) {
+    @apply hover:bg-[#2d6bd0];
+  }
+}
+
+.close-icon {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  cursor: pointer;
+  &::after,&::before {
+    content: '';
+    width: 20px;
+    height: 2px;
+    background: #222;
+    position: absolute;
+    left: 0;
+    top: 9px;
+  }
+  &::after {
+    transform: rotate(-45deg);
+  }
+  &::before {
+    transform: rotate(45deg);
+  }
+}
